@@ -1,0 +1,33 @@
+<title>A simple dashboard</title>
+
+<h1>Total number of repositories:</h1>
+<h3>Python: {{py_count}}</h3>
+<h3>C: {{c_count}}</h3>
+<h3>Ruby: {{ruby_count}}</h3>
+<img src={{url}} alt="Chart" height="auto" width="50%">
+<body>
+    <h1> Top 10 words by language: </h1>
+    <h3>Python: </h3>
+    <ul>
+        {% for p in py_words%}
+        <li>{{ p[0] }} : {{ p[1] }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Ruby: </h3>
+    <ul>
+        {% for r in ruby_words%}
+    
+        <li>{{ r[0] }} : {{ r[1] }}</li>
+    
+        {% endfor %}
+    </ul>
+    <h3>C: </h3>
+    <ul>
+        {% for c in c_words%}
+    
+        <li>{{ c[0] }} : {{ c[1] }}</li>
+    
+        {% endfor %}
+    </ul>
+    
+</body>
